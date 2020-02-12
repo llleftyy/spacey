@@ -1,0 +1,5 @@
+{
+    "tableName": "spaceydb",
+    "partitionKeyName": "word",
+    "partitionKeyType": "S"
+}

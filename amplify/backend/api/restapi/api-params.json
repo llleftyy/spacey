@@ -1,0 +1,41 @@
+{
+    "paths": [
+        {
+            "name": "/api",
+            "lambdaFunction": "apilambda",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ]
+            }
+        }
+    ],
+    "resourceName": "restapi",
+    "apiName": "restapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "apilambda"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "amplify-spacey-dev-120437-authRole",
+        "unAuthRoleName": "amplify-spacey-dev-120437-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "apilambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
